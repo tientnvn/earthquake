@@ -5,6 +5,6 @@ export const options = {
   duration: '30s',
 };
 export default function () {
-  http.get('http://earthquake:3000/api/');
+  http.get('http://localhost:3000/api/');
   sleep(1);
 }
