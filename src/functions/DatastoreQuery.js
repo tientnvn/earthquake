@@ -2,8 +2,6 @@ const { query } = require('./database');
 const SQL = require('sql-template-strings');
 
 module.exports.saveDatastore = async ({type, req_url, headers, response }) => {
-  console.log(req_url)
-  console.log(response.length)
   let queryInsertEarthquake = SQL`INSERT INTO datastore 
   ( type, req_url, headers, response ) 
   VALUES (${type}, ${req_url}, ${headers}, ${response})`;
