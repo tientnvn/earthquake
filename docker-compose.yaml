@@ -7,7 +7,7 @@ services:
       - .env
     command: /bin/sh -c "yarn dev"
     ports:
-      - 3001:$PORT
+      - $PORT:$PORT
     volumes:
       - .:/app:z
   mongo:
