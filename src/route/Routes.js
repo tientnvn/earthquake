@@ -7,6 +7,7 @@ const importRoute = require('./Import');
 const dataRoute = require('./Data');
 const authRoute = require('./Auth');
 const earthquakeRoute = require('./Earthquake');
+const auth = require("../middleware/Auth");
 
 // Health check route API
 router.get('/', asyncErrorHandler((req, res) => {
@@ -18,10 +19,10 @@ router.get('/', asyncErrorHandler((req, res) => {
 );
 
 router.use('/earthquakes/import', [], asyncErrorHandler(importEarthquakeRoute));
-router.use('/earthquakes', [], asyncErrorHandler(earthquakeRoute));
+router.use('/earthquakes', auth, asyncErrorHandler(earthquakeRoute));
 
 router.use('/data/import', [], asyncErrorHandler(importRoute));
-router.use('/data', [], asyncErrorHandler(dataRoute));
+router.use('/data', auth, asyncErrorHandler(dataRoute));
 
 router.use('/auth', [], asyncErrorHandler(authRoute));
 
