@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon services.js",
     "start": "node services.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "db-migrate --env=mysql up"
   },
   "author": "HSC",
   "license": "ISC",

@@ -3,9 +3,12 @@ services:
   earthquake:
     restart: always
     build: .
+    depends_on:
+      - mysql
+      - mongo
     env_file:
       - .env
-    command: /bin/sh -c "yarn dev"
+    command: /bin/sh -c "yarn migrate; yarn dev"
     ports:
       - $PORT:$PORT
     # Uncomment below lines to enable host reload
