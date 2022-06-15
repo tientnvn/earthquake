@@ -3,13 +3,13 @@ const { getEarthquakes } = require("../controllers/Earthquake")
 const boom = require('@hapi/boom');
 
 earthquakeRoute.get('/', (req, res, next) => {
-
-  getEarthquakes(req, res).catch(err => {
-    next(err)
-  })
-
-  
-
+  getEarthquakes(req, res)
+    .then((result) => {
+      res.json(result)
+    })
+    .catch(err => {
+      next(err)
+    })
 
 });
 

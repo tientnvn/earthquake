@@ -7,7 +7,7 @@ const getEarthquakes = async (req, res) => {
   if (totalItem && totalItem.length > 0) {
     let pagination = getPagination(req.query, totalItem[0].total)
     let result = await getEarthquake(pagination);
-    res.json({data: result, pagination })
+    return {data: result, pagination }
   } else {
     throw boom.badRequest("NoItemWasFound")
   }
