@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "edc5153a-f78a-40c4-877d-e593ec2908d4",
+		"name": "EarthSquake",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CheckService",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Earthquake",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/earthquakes/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"earthquakes",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/data/import?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"data",
+						"import"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Earthquake",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/earthquakes?itemPerPage=2&page=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"earthquakes"
+					],
+					"query": [
+						{
+							"key": "itemPerPage",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/data?itemPerPage=2&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"data"
+					],
+					"query": [
+						{
+							"key": "itemPerPage",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
