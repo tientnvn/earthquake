@@ -13,10 +13,7 @@ const cors = require('./src/middleware/Cors');
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
-// const mongoose = require('mongoose');
-// const { MONGO_USERNAME, MONGO_PASSWORD, MONGO_HOST, MONGO_PORT, MONGO_DBNAME } = process.env;
-// const MONGO_URI = `mongodb://${(MONGO_USERNAME != "") ? `${MONGO_USERNAME}:${MONGO_PASSWORD}@` : ""}${MONGO_HOST}:${MONGO_PORT}/${MONGO_DBNAME}${(MONGO_USERNAME != "") ? `?authSource=admin` : ""}`
-// mongoose.connect(MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true });
+require("./src/config/database").connect();
 
 // Initialize the app
 const app = express();

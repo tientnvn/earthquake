@@ -12,8 +12,8 @@ services:
     ports:
       - $PORT:$PORT
     # Uncomment below lines to enable host reload
-    # volumes:
-    #   - .:/app:z
+    volumes:
+      - .:/app:z
   mongo:
     image: mongo
     env_file: ./.env
@@ -31,7 +31,9 @@ services:
       MYSQL_DATABASE: $MYSQL_DATABASE
     ports:
       - 3306:3306
-  
+    volumes:
+      - earthquake-db:/var/lib/mysql
 volumes:
   mongodb:
+  earthquake-db:
 

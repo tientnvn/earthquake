@@ -5,6 +5,7 @@ const { SERVICE_NAME } = process.env;
 const importEarthquakeRoute = require('./ImportEarthquake');
 const importRoute = require('./Import');
 const dataRoute = require('./Data');
+const authRoute = require('./Auth');
 const earthquakeRoute = require('./Earthquake');
 
 // Health check route API
@@ -21,6 +22,8 @@ router.use('/earthquakes', [], asyncErrorHandler(earthquakeRoute));
 
 router.use('/data/import', [], asyncErrorHandler(importRoute));
 router.use('/data', [], asyncErrorHandler(dataRoute));
+
+router.use('/auth', [], asyncErrorHandler(authRoute));
 
 // Export API routes
 module.exports = router;
