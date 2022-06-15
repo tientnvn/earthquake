@@ -80,3 +80,7 @@
 ::ffff:172.24.0.1 - - [15/Jun/2022:16:10:36 +0000] "POST /api/import?url=https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson HTTP/1.1" 200 25 "-" "PostmanRuntime/7.28.4"
 ::ffff:172.24.0.1 - - [15/Jun/2022:16:16:17 +0000] "GET /api/data HTTP/1.1" 200 40730 "-" "PostmanRuntime/7.28.4"
 ::ffff:172.24.0.1 - - [15/Jun/2022:16:21:17 +0000] "GET /api/data HTTP/1.1" 200 35998 "-" "PostmanRuntime/7.28.4"
+::ffff:172.24.0.1 - - [15/Jun/2022:16:31:54 +0000] "GET /api/data HTTP/1.1" 200 35998 "-" "PostmanRuntime/7.28.4"
+::ffff:172.24.0.1 - - [15/Jun/2022:16:32:38 +0000] "GET /api/data?page=1&itemPerPage=2 HTTP/1.1" 200 35996 "-" "PostmanRuntime/7.28.4"
+::ffff:172.24.0.1 - - [15/Jun/2022:16:33:03 +0000] "GET /api/data??itemPerPage=2&page=3 HTTP/1.1" 200 132 "-" "PostmanRuntime/7.28.4"
+::ffff:172.24.0.1 - - [15/Jun/2022:16:33:19 +0000] "GET /api/data??itemPerPage=2&page=1 HTTP/1.1" 200 35998 "-" "PostmanRuntime/7.28.4"
