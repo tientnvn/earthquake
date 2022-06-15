@@ -8,8 +8,9 @@ services:
     command: /bin/sh -c "yarn dev"
     ports:
       - $PORT:$PORT
-    volumes:
-      - .:/app:z
+    # Uncomment below lines to enable host reload
+    # volumes:
+    #   - .:/app:z
   mongo:
     image: mongo
     env_file: ./.env
