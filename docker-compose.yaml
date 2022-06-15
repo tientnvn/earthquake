@@ -8,7 +8,7 @@ services:
       - mongo
     env_file:
       - .env
-    command: /bin/sh -c "yarn migrate; yarn dev"
+    command: /bin/sh -c "yarn dev"
     ports:
       - $PORT:$PORT
     # Uncomment below lines to enable host reload
@@ -31,6 +31,7 @@ services:
       MYSQL_DATABASE: $MYSQL_DATABASE
     ports:
       - 3306:3306
+  
 volumes:
   mongodb:
 
