@@ -1,0 +1,12 @@
+{
+    "pg": {
+        "driver": "pg",
+        "user": "postgres",
+        "password": "",
+        "host": "localhost",
+        "database": "",
+        "port": "3333",
+        "ssl": "false",
+        "schema": "public"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "mysql": {
+        "driver": "mysql",
+        "user": "root",
+        "password": "changeme",
+        "host": "mysql",
+        "database": "earthquake",
+        "port": "3306",
+        "multipleStatements": true
+    }
+}

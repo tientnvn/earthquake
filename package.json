@@ -1,0 +1,42 @@
+{
+  "name": "csp-new-api-setting-services",
+  "version": "1.0.0",
+  "description": "CSP New API Setting Services",
+  "main": "services.js",
+  "scripts": {
+    "dev": "nodemon services.js",
+    "start": "node services.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HSC",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@joi/date": "^2.1.0",
+    "async-mutex": "^0.2.3",
+    "axios": "^0.19.0",
+    "binascii": "0.0.2",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "db-migrate-pg": "^1.2.2",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "image-to-base64": "^2.2.0",
+    "is-empty": "^1.2.0",
+    "joi": "^17.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.28.0",
+    "mongoose": "^5.10.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "node-cache": "^5.1.2",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.4.6",
+    "pagination-js": "^2.0.2",
+    "serverless-mysql": "^1.5.4",
+    "sql-template-strings": "^2.2.2",
+    "utf8": "^3.0.0",
+    "winston": "^3.3.3"
+  }
+}

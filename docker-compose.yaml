@@ -1,0 +1,32 @@
+version: '3'
+services:
+  earthquake:
+    restart: always
+    build: .
+    env_file:
+      - .env
+    command: /bin/sh -c "yarn dev"
+    ports:
+      - 3001:$PORT
+    volumes:
+      - .:/app:z
+  mongo:
+    image: mongo
+    env_file: ./.env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: $MONGO_USERNAME
+      MONGO_INITDB_ROOT_PASSWORD: $MONGO_PASSWORD
+    ports:
+      - 27019:27017
+    volumes:
+      - mongodb:/data/db
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: $MYSQL_DATABASE
+    ports:
+      - 3306:3306
+volumes:
+  mongodb:
+
